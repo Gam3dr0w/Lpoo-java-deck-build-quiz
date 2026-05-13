@@ -11,9 +11,9 @@ public class Game {
         Player player = escolherPersonagem(nome);
 
         Enemy[] inimigos = {
-                new Enemy("Bug Iniciante", 45, 6, 1),
-                new Enemy("Erro de Compilação", 60, 8, 2),
-                new Enemy("Boss NullPointer", 80, 10, 3)
+                new Enemy("Bug Iniciante", 50, 6, 1),
+                new Enemy("Erro de Compilação", 80, 8, 2),
+                new Enemy("Boss NullPointer", 100, 10, 3)
         };
 
         BattleManager bm = new BattleManager(sc);

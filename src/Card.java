@@ -10,7 +10,7 @@ public class Card {
     public void use(Player p, Enemy e) {
         switch (id) {
             case "JAVA":
-                e.takeDamage(p.getAttack() + 4);
+                e.takeDamage(p.getAttack() + 12);
                 break;
             case "LOOP":
                 e.takeDamage(p.getAttack() * 2);
@@ -35,7 +35,7 @@ public class Card {
                 e.takeDamage(p.getAttack() + p.getDefense() / 2);
                 break;
             case "MATH":
-                e.takeDamage(p.getAttack() + 8);
+                e.takeDamage(20);
                 break;
             case "FIREWALL":
                 p.buffDefense(5);
