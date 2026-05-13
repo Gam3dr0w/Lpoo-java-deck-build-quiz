@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class MultipleChoiceQuestion extends Question {
+    private String[] options;
+
+    public MultipleChoiceQuestion(String text, String answer, String category, String... options) {
+        super(text, answer, category);
+        this.options = options;
+    }
+
+    public boolean ask(Scanner sc) {
+        System.out.println("\n" + text);
+
+        for (int i = 0; i < options.length; i++) {
+            System.out.println((i + 1) + ") " + options[i]);
+        }
+
+        System.out.print("Resposta: ");
+        return check(sc.nextLine());
+    }
+}
