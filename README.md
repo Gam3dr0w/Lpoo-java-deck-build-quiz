@@ -8,10 +8,10 @@ Ao começar, você escolhe o nome do seu personagem e o tipo que ele pertence. I
 
 Updates do checkpoint 2:
 
-I) Adicionado 3 diferentes níveis de dificuldade que dão bônus variável de ataque entre os turnos
+I) Adicionado 3 diferentes níveis de dificuldade que dão bônus de ataque entre os turnos
 
--Facil: entre 0-5
--Média: entre 3-10
--Dificil: entre 6-15
+-Facil: nenhum bônus
+-Média: +3
+-Dificil: +6
 
 II) Adicionadas perguntas de preencher lacuna (fill blank), e elas se encaixam na dificuldade difícil.
