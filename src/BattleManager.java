@@ -20,9 +20,10 @@ public class BattleManager {
             showStatus(player, enemy);
 
             if (hand.isEmpty()) {
-                System.out.println("Você ficou sem cartas. Perdeu o turno e comprou 3 cartas.");
+                System.out.println("Sem cartas: voce perdeu o turno e comprou 3 cartas.");
                 draw(hand, 3);
                 enemy.attack(player);
+                player.endTurn();
                 turn++;
                 continue;
             }
@@ -30,21 +31,17 @@ public class BattleManager {
             showActions(hand);
             int choice = readChoice(hand.size());
 
-            if (choice == 0) {
-                usarAtaqueComum(player, enemy);
-            } else {
-                usarCarta(player, enemy, hand, choice);
-            }
+            if (choice == 0) usarAtaqueComum(player, enemy);
+            else usarCarta(player, enemy, hand, choice);
 
-            if (enemy.isAlive()) {
-                enemy.attack(player);
-            }
+            if (enemy.isAlive()) enemy.attack(player);
 
             if (turn % 2 == 0) {
                 draw(hand, 1);
-                System.out.println("Você comprou 1 carta.");
+                System.out.println("Voce comprou 1 carta.");
             }
 
+            player.endTurn();
             turn++;
         }
 
@@ -52,37 +49,36 @@ public class BattleManager {
     }
 
     private void usarAtaqueComum(Player player, Enemy enemy) {
-        System.out.println("\nVocê escolheu Ataque Comum.");
+        System.out.println("\nAtaque Comum escolhido.");
         Question q = bank.getRandomAnyQuestion();
 
         if (q.ask(sc)) {
-            System.out.println("Resposta correta! Ataque comum realizado.");
-            enemy.takeDamage(player.getAttack());
-            player.addScore(5);
+            int damage = player.getAttack() + q.getDifficulty().getDamageBonus();
+            System.out.println("Correto! Dificuldade " + q.getDifficulty().getName()
+                    + " deu +" + q.getDifficulty().getDamageBonus() + " de dano.");
+            enemy.takeDamage(damage);
+            player.addScore(q.getDifficulty().getScore());
         } else {
-            System.out.println("Resposta errada! O ataque comum falhou.");
+            System.out.println("Errado! O ataque falhou.");
         }
     }
 
     private void usarCarta(Player player, Enemy enemy, List<Card> hand, int choice) {
         Card card = hand.remove(choice - 1);
-
-        System.out.println("\nCarta usada: " + card.getName());
         Question q = bank.getRandomQuestion(card.getId());
+        System.out.println("\nCarta usada: " + card.getName());
 
         if (q.ask(sc)) {
-            System.out.println("Resposta correta! A carta funcionou.");
-            card.use(player, enemy);
-            player.addScore(10);
+            System.out.println("Correto! A carta ativou com bonus da dificuldade " + q.getDifficulty().getName() + ".");
+            card.use(player, enemy, q);
+            player.addScore(q.getDifficulty().getScore() + 5);
         } else {
-            System.out.println("Resposta errada! A carta falhou.");
+            System.out.println("Errado! A carta foi descartada sem efeito.");
         }
     }
 
     private void draw(List<Card> hand, int amount) {
-        for (int i = 0; i < amount; i++) {
-            hand.add(deck.get(random.nextInt(deck.size())));
-        }
+        for (int i = 0; i < amount; i++) hand.add(deck.get(random.nextInt(deck.size())));
     }
 
     private void showStatus(Player p, Enemy e) {
@@ -93,24 +89,18 @@ public class BattleManager {
     }
 
     private void showActions(List<Card> hand) {
-        System.out.println("\nAções:");
-        System.out.println("0 - Ataque Comum - causa dano base e usa pergunta aleatória");
-
-        System.out.println("\nCartas:");
-        for (int i = 0; i < hand.size(); i++) {
-            System.out.println((i + 1) + " - " + hand.get(i));
-        }
+        System.out.println("\n0 - Ataque Comum - dano base + bonus da dificuldade");
+        for (int i = 0; i < hand.size(); i++) System.out.println((i + 1) + " - " + hand.get(i));
     }
 
     private int readChoice(int maxCards) {
         while (true) {
-            System.out.print("Escolha uma ação: ");
+            System.out.print("Escolha uma acao: ");
             try {
                 int n = Integer.parseInt(sc.nextLine());
                 if (n >= 0 && n <= maxCards) return n;
-            } catch (Exception e) {
-                System.out.println("Digite um número válido.");
-            }
+            } catch (Exception ignored) {}
+            System.out.println("Digite um numero valido.");
         }
     }
 }

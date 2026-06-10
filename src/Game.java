@@ -4,16 +4,16 @@ public class Game {
     private Scanner sc = new Scanner(System.in);
 
     public void start() {
-        System.out.println("=== CodeArena: Deck do Conhecimento ===");
+        System.out.println("=== CodeArena: Deck do Conhecimento - Checkpoint 2 ===");
         System.out.print("Nome do jogador: ");
         String nome = sc.nextLine();
 
         Player player = escolherPersonagem(nome);
 
         Enemy[] inimigos = {
-                new Enemy("Bug Iniciante", 50, 6, 1),
-                new Enemy("Erro de Compilação", 80, 8, 2),
-                new Enemy("Boss NullPointer", 100, 10, 3)
+            new Enemy("Bug Iniciante", 45, 6, 1),
+            new Enemy("Erro de Compilacao", 65, 8, 2),
+            new Enemy("Boss NullPointer", 90, 11, 3)
         };
 
         BattleManager bm = new BattleManager(sc);
@@ -23,30 +23,24 @@ public class Game {
             boolean venceu = bm.startBattle(player, e);
 
             if (!venceu) {
-                System.out.println("\nVocê perdeu a jornada!");
+                System.out.println("\nVoce perdeu a jornada!");
+                System.out.println("Pontuacao final: " + player.getScore());
                 return;
             }
 
             player.heal(15);
-            System.out.println("Você venceu a batalha e recuperou 15 de vida!");
+            System.out.println("Voce venceu e recuperou 15 de vida!");
         }
 
-        System.out.println("\nParabéns! Você venceu todas as batalhas!");
-        System.out.println("Pontuação final: " + player.getScore());
+        System.out.println("\nParabens! Voce venceu todas as batalhas!");
+        System.out.println("Pontuacao final: " + player.getScore());
     }
 
     private Player escolherPersonagem(String nome) {
         System.out.println("\nEscolha seu personagem:");
         System.out.println("1 - Programador: equilibrado");
         System.out.println("2 - Hacker: mais ataque, menos defesa");
-        System.out.print("Opção: ");
-
-        String op = sc.nextLine();
-
-        if (op.equals("2")) {
-            return new Player(nome, new Hacker());
-        }
-
-        return new Player(nome, new Programmer());
+        System.out.print("Opcao: ");
+        return sc.nextLine().equals("2") ? new Player(nome, new Hacker()) : new Player(nome, new Programmer());
     }
 }

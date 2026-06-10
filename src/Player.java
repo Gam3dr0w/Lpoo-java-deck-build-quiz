@@ -1,15 +1,23 @@
 public class Player extends Character {
-    private int score;
+    private int score, temporaryDefenseTurns;
 
     public Player(String playerName, Character c) {
         super(playerName + " - " + c.getName(), c.getMaxHp(), c.getAttack(), c.getDefense());
     }
 
-    public void addScore(int value) {
-        score += value;
+    public void addTemporaryShield(int value, int turns) {
+        buffDefense(value);
+        temporaryDefenseTurns += turns;
+        System.out.println("Escudo temporario ativo por " + turns + " turno(s).");
     }
 
-    public int getScore() {
-        return score;
+    public void endTurn() {
+        if (temporaryDefenseTurns > 0 && --temporaryDefenseTurns == 0) {
+            defense = Math.max(0, defense - 3);
+            System.out.println("O escudo temporario acabou.");
+        }
     }
+
+    public void addScore(int value) { score += value; }
+    public int getScore() { return score; }
 }

@@ -7,133 +7,133 @@ public class QuestionBank {
 
     public QuestionBank() {
         add("JAVA",
-                mc("Qual modificador impede herança de uma classe?", "3", "static", "private", "final", "abstract"),
-                mc("Qual conceito permite métodos com comportamentos diferentes?", "2", "encapsulamento", "polimorfismo", "atributo", "instância"),
-                tf("Classe abstrata pode ter métodos concretos e abstratos.", "V"),
-                mc("Principal função do encapsulamento?", "1", "proteger dados", "aumentar FPS", "remover construtores", "impedir objetos"),
-                mc("Variável local existe onde?", "4", "em todo projeto", "em toda classe", "em outro pacote", "só no método"),
-                tf("Interface define comportamentos que classes implementam.", "V"),
-                mc("Criação correta de objeto?", "2", "Player p = Player();", "Player p = new Player();", "new Player = p;", "object Player p;"),
-                mc("Sobrescrever método da classe mãe é:", "3", "sobrecarga", "compilação", "sobrescrita", "encapsulamento"),
-                tf("Construtor tem o mesmo nome da classe.", "V"),
-                mc("Palavra que acessa a classe mãe?", "1", "super", "this", "extends", "parent")
+            mc("Qual modificador impede heranca de uma classe?", "3", Difficulty.MEDIUM, "static", "private", "final", "abstract"),
+            mc("Qual conceito permite metodos com comportamentos diferentes?", "2", Difficulty.MEDIUM, "encapsulamento", "polimorfismo", "atributo", "instancia"),
+            tf("Classe abstrata pode ter metodos concretos e abstratos.", "V", Difficulty.EASY),
+            mc("Principal funcao do encapsulamento?", "1", Difficulty.MEDIUM, "proteger dados", "aumentar FPS", "remover construtores", "impedir objetos"),
+            fb("Palavra que cria objeto em Java: ____", "new", Difficulty.EASY),
+            tf("Interface define comportamentos que classes implementam.", "V", Difficulty.EASY),
+            mc("Criacao correta de objeto?", "2", Difficulty.MEDIUM, "Player p = Player();", "Player p = new Player();", "new Player = p;", "object Player p;"),
+            mc("Sobrescrever metodo da classe mae e:", "3", Difficulty.MEDIUM, "sobrecarga", "compilacao", "sobrescrita", "encapsulamento"),
+            tf("Construtor tem o mesmo nome da classe.", "V", Difficulty.EASY),
+            fb("Palavra que acessa membros da classe mae: ____", "super", Difficulty.HARD)
         );
 
         add("LOOP",
-                mc("Valor final: int x=0; for(int i=1;i<=4;i++){x+=i;}", "4", "4", "6", "8", "10"),
-                mc("O que causa loop infinito?", "1", "condição nunca falsa", "usar int", "usar print", "ter uma linha"),
-                tf("Um for pode ser convertido em while.", "V"),
-                mc("Quantas vezes executa? for(int i=10;i>4;i-=2)", "3", "2", "4", "3", "5"),
-                mc("Comando que encerra um laço?", "2", "continue", "break", "returnLoop", "stopFor"),
-                tf("continue pula para a próxima repetição.", "V"),
-                mc("Saída: for(int i=0;i<3;i++) print(i)", "1", "012", "123", "0123", "111"),
-                mc("Melhor laço quando sabe o número de repetições?", "3", "if", "switch", "for", "try"),
-                tf("Laço dentro de laço é laço aninhado.", "V"),
-                mc("Loop externo 3 vezes e interno 4 vezes: total?", "4", "4", "7", "10", "12")
+            mc("Valor final: int x=0; for(int i=1;i<=4;i++){x+=i;}", "4", Difficulty.MEDIUM, "4", "6", "8", "10"),
+            mc("O que causa loop infinito?", "1", Difficulty.EASY, "condicao nunca falsa", "usar int", "usar print", "ter uma linha"),
+            tf("Um for pode ser convertido em while.", "V", Difficulty.EASY),
+            mc("Quantas vezes executa? for(int i=10;i>4;i-=2)", "3", Difficulty.MEDIUM, "2", "4", "3", "5"),
+            fb("Comando que encerra um laco: ____", "break", Difficulty.EASY),
+            tf("continue pula para a proxima repeticao.", "V", Difficulty.EASY),
+            mc("Saida: for(int i=0;i<3;i++) print(i)", "1", Difficulty.MEDIUM, "012", "123", "0123", "111"),
+            mc("Melhor laco quando sabe o numero de repeticoes?", "3", Difficulty.EASY, "if", "switch", "for", "try"),
+            tf("Laco dentro de laco e laco aninhado.", "V", Difficulty.EASY),
+            mc("Loop externo 3 vezes e interno 4 vezes: total?", "4", Difficulty.HARD, "4", "7", "10", "12")
         );
 
         add("CURA",
-                mc("Sistema que defende contra microrganismos?", "2", "respiratório", "imunológico", "digestivo", "locomotor"),
-                tf("Antibióticos combatem bactérias, não vírus diretamente.", "V"),
-                mc("Nutriente ligado ao reparo de tecidos?", "1", "proteína", "CO2", "sódio puro", "celulose"),
-                mc("Cicatrização depende de:", "3", "luz solar", "ausência de sangue", "renovação celular", "frio extremo"),
-                tf("Febre pode ser resposta contra infecções.", "V"),
-                mc("Célula de defesa do sangue?", "4", "hemácia", "neurônio", "plaqueta", "leucócito"),
-                mc("Órgão que filtra sangue?", "2", "pulmão", "rim", "estômago", "coração"),
-                tf("Vacinas treinam o sistema imunológico.", "V"),
-                mc("Vitamina ligada à coagulação?", "3", "C", "D", "K", "B1"),
-                mc("Homeostase é:", "1", "equilíbrio interno", "energia solar", "calor infinito", "perda de água")
+            mc("Sistema que defende contra microrganismos?", "2", Difficulty.EASY, "respiratorio", "imunologico", "digestivo", "locomotor"),
+            tf("Antibioticos combatem bacterias, nao virus diretamente.", "V", Difficulty.MEDIUM),
+            mc("Nutriente ligado ao reparo de tecidos?", "1", Difficulty.EASY, "proteina", "CO2", "sodio puro", "celulose"),
+            mc("Cicatrizacao depende de:", "3", Difficulty.MEDIUM, "luz solar", "ausencia de sangue", "renovacao celular", "frio extremo"),
+            tf("Febre pode ser resposta contra infeccoes.", "V", Difficulty.EASY),
+            fb("Celula de defesa do sangue: ____", "leucocito", Difficulty.HARD),
+            mc("Orgao que filtra sangue?", "2", Difficulty.EASY, "pulmao", "rim", "estomago", "coracao"),
+            tf("Vacinas treinam o sistema imunologico.", "V", Difficulty.EASY),
+            mc("Vitamina ligada a coagulacao?", "3", Difficulty.HARD, "C", "D", "K", "B1"),
+            mc("Homeostase e:", "1", Difficulty.HARD, "equilibrio interno", "energia solar", "calor infinito", "perda de agua")
         );
 
         add("ESCUDO",
-                mc("2ª Lei de Newton:", "3", "m/a", "v.t", "m.a", "E.d"),
-                tf("Maior massa geralmente significa maior inércia.", "V"),
-                mc("Capacete protege porque:", "2", "aumenta impacto", "distribui impacto", "remove gravidade", "gera velocidade"),
-                mc("Unidade de pressão no SI?", "4", "Newton", "Joule", "Watt", "Pascal"),
-                tf("Atrito depende de contato entre superfícies.", "V"),
-                mc("Objeto parado tende a ficar parado por causa da:", "1", "inércia", "radiação", "evaporação", "densidade"),
-                mc("Maior pressão ocorre com:", "3", "mesma força em área maior", "força zero", "mesma força em área menor", "área gigante"),
-                tf("Ação gera reação oposta de mesma intensidade.", "V"),
-                mc("Energia cinética está ligada a:", "2", "temperatura", "movimento", "repouso", "cor"),
-                mc("Defesa no jogo parece com:", "1", "resistência", "mais dano recebido", "cura inimiga", "perda de turno")
+            mc("2 Lei de Newton:", "3", Difficulty.MEDIUM, "m/a", "v.t", "m.a", "E.d"),
+            tf("Maior massa geralmente significa maior inercia.", "V", Difficulty.EASY),
+            mc("Capacete protege porque:", "2", Difficulty.MEDIUM, "aumenta impacto", "distribui impacto", "remove gravidade", "gera velocidade"),
+            fb("Unidade de pressao no SI: ____", "pascal", Difficulty.HARD),
+            tf("Atrito depende de contato entre superficies.", "V", Difficulty.EASY),
+            mc("Objeto parado tende a ficar parado por causa da:", "1", Difficulty.MEDIUM, "inercia", "radiacao", "evaporacao", "densidade"),
+            mc("Maior pressao ocorre com:", "3", Difficulty.HARD, "mesma forca em area maior", "forca zero", "mesma forca em area menor", "area gigante"),
+            tf("Acao gera reacao oposta de mesma intensidade.", "V", Difficulty.MEDIUM),
+            mc("Energia cinetica esta ligada a:", "2", Difficulty.EASY, "temperatura", "movimento", "repouso", "cor"),
+            mc("Defesa no jogo parece com:", "1", Difficulty.EASY, "resistencia", "mais dano recebido", "cura inimiga", "perda de turno")
         );
 
         add("BUFF",
-                mc("Buff temporário altera:", "4", "nome", "cenário", "história", "atributo por tempo"),
-                tf("Aumento de ataque muda o balanceamento.", "V"),
-                mc("Ataque 12 com buff de 25% vira:", "2", "13", "15", "16", "18"),
-                mc("Estrutura para guardar buffs ativos?", "1", "List", "int", "char", "boolean"),
-                tf("Buffs podem ser acumulativos ou não.", "V"),
-                mc("Buff de 1 turno deve sair:", "3", "antes de usar", "nunca", "após o turno", "ao fechar jogo"),
-                mc("Melhor exemplo de buff:", "4", "perder vida", "travar", "apagar personagem", "aumentar ataque"),
-                tf("Buff permanente dura até fim da batalha ou jogo.", "V"),
-                mc("20 +10% e depois +5 =", "2", "22", "27", "25", "30"),
-                mc("Classe Buff poderia ter:", "1", "nome, duração e valor", "só print", "só main", "só Scanner")
+            mc("Buff temporario altera:", "4", Difficulty.EASY, "nome", "cenario", "historia", "atributo por tempo"),
+            tf("Aumento de ataque muda o balanceamento.", "V", Difficulty.MEDIUM),
+            mc("Ataque 12 com buff de 25% vira:", "2", Difficulty.MEDIUM, "13", "15", "16", "18"),
+            mc("Estrutura para guardar buffs ativos?", "1", Difficulty.MEDIUM, "List", "int", "char", "boolean"),
+            tf("Buffs podem ser acumulativos ou nao.", "V", Difficulty.EASY),
+            mc("Buff de 1 turno deve sair:", "3", Difficulty.MEDIUM, "antes de usar", "nunca", "apos o turno", "ao fechar jogo"),
+            mc("Melhor exemplo de buff:", "4", Difficulty.EASY, "perder vida", "travar", "apagar personagem", "aumentar ataque"),
+            tf("Buff permanente dura ate fim da batalha ou jogo.", "V", Difficulty.EASY),
+            mc("20 +10% e depois +5 =", "2", Difficulty.HARD, "22", "27", "25", "30"),
+            fb("Classe Buff poderia ter nome, duracao e ____", "valor", Difficulty.HARD)
         );
 
         add("HISTORIA",
-                mc("Revolução Francesa começou em:", "3", "1492", "1640", "1789", "1917"),
-                tf("Independência do Brasil foi em 1822.", "V"),
-                mc("Lei Áurea fez:", "2", "criou república", "aboliu escravidão", "iniciou colonização", "fundou Brasília"),
-                mc("Início da Idade Contemporânea:", "1", "Revolução Francesa", "Queda de Constantinopla", "Brasil 1500", "Cruzadas"),
-                tf("A 1ª Guerra veio antes da 2ª Guerra.", "V"),
-                mc("Colonial brasileiro começou forte com:", "4", "petróleo", "café industrial", "soja", "açúcar"),
-                mc("Guerra Fria: rivalidade entre:", "3", "Brasil e Argentina", "França e Alemanha", "EUA e URSS", "Portugal e Espanha"),
-                tf("Inconfidência Mineira envolveu impostos portugueses.", "V"),
-                mc("República no Brasil foi proclamada em:", "2", "1822", "1889", "1930", "1964"),
-                mc("Iluminismo defendia:", "1", "razão e ciência", "feudalismo", "fim da ciência", "absolutismo total")
+            mc("Revolucao Francesa comecou em:", "3", Difficulty.MEDIUM, "1492", "1640", "1789", "1917"),
+            tf("Independencia do Brasil foi em 1822.", "V", Difficulty.EASY),
+            mc("Lei Aurea fez:", "2", Difficulty.EASY, "criou republica", "aboliu escravidao", "iniciou colonizacao", "fundou Brasilia"),
+            mc("Inicio da Idade Contemporanea:", "1", Difficulty.HARD, "Revolucao Francesa", "Queda de Constantinopla", "Brasil 1500", "Cruzadas"),
+            tf("A 1 Guerra veio antes da 2 Guerra.", "V", Difficulty.EASY),
+            mc("Colonial brasileiro comecou forte com:", "4", Difficulty.MEDIUM, "petroleo", "cafe industrial", "soja", "acucar"),
+            mc("Guerra Fria: rivalidade entre:", "3", Difficulty.EASY, "Brasil e Argentina", "Franca e Alemanha", "EUA e URSS", "Portugal e Espanha"),
+            tf("Inconfidencia Mineira envolveu impostos portugueses.", "V", Difficulty.MEDIUM),
+            mc("Republica no Brasil foi proclamada em:", "2", Difficulty.MEDIUM, "1822", "1889", "1930", "1964"),
+            fb("Movimento que defendia razao e ciencia: ____", "iluminismo", Difficulty.HARD)
         );
 
         add("VIDA",
-                mc("Organela que produz energia?", "2", "ribossomo", "mitocôndria", "lisossomo", "vacúolo"),
-                tf("DNA contém informações genéticas.", "V"),
-                mc("Fotossíntese usa:", "1", "luz, água e CO2", "som e areia", "ferro e calor", "petróleo"),
-                mc("Seleção natural está ligada a:", "3", "Newton", "Dalton", "Darwin", "Pascal"),
-                tf("Autotróficos produzem próprio alimento.", "V"),
-                mc("Fonte rápida de energia celular:", "4", "DNA", "RNA", "queratina", "ATP"),
-                mc("Troca gasosa ocorre nos:", "2", "ossos", "alvéolos", "rins", "músculos"),
-                tf("Células eucariontes possuem núcleo organizado.", "V"),
-                mc("Processo que gera duas células iguais:", "1", "mitose", "meiose", "fecundação", "mutação"),
-                mc("Relação seres vivos e ambiente:", "3", "astronomia", "geometria", "ecologia", "mecânica")
+            mc("Organela que produz energia?", "2", Difficulty.MEDIUM, "ribossomo", "mitocondria", "lisossomo", "vacuolo"),
+            tf("DNA contem informacoes geneticas.", "V", Difficulty.EASY),
+            mc("Fotossintese usa:", "1", Difficulty.MEDIUM, "luz, agua e CO2", "som e areia", "ferro e calor", "petroleo"),
+            mc("Selecao natural esta ligada a:", "3", Difficulty.EASY, "Newton", "Dalton", "Darwin", "Pascal"),
+            tf("Autotroficos produzem proprio alimento.", "V", Difficulty.MEDIUM),
+            fb("Fonte rapida de energia celular: ____", "ATP", Difficulty.HARD),
+            mc("Troca gasosa ocorre nos:", "2", Difficulty.MEDIUM, "ossos", "alveolos", "rins", "musculos"),
+            tf("Celulas eucariontes possuem nucleo organizado.", "V", Difficulty.EASY),
+            mc("Processo que gera duas celulas iguais:", "1", Difficulty.HARD, "mitose", "meiose", "fecundacao", "mutacao"),
+            mc("Relacao seres vivos e ambiente:", "3", Difficulty.EASY, "astronomia", "geometria", "ecologia", "mecanica")
         );
 
         add("CONTRA",
-                mc("Negação de 'A e B':", "4", "A e não B", "A ou B", "não A e não B sempre", "não A ou não B"),
-                tf("Defender pode ser útil sem dano imediato.", "V"),
-                mc("No xadrez, ameaça direta ao rei:", "2", "roque", "xeque", "empate", "promoção"),
-                mc("Se inimigo sempre ataca, boa ação:", "1", "aumentar defesa", "curar inimigo", "ignorar vida", "jogar aleatório"),
-                tf("Prever ação inimiga faz parte da estratégia.", "V"),
-                mc("Resposta proporcional a uma ação:", "3", "evaporação", "inércia térmica", "ação e reação", "condensação"),
-                mc("A=true, B=false. A || B =", "1", "verdadeiro", "falso", "nulo", "erro"),
-                tf("Contra-atacar é reagir a uma ação adversária.", "V"),
-                mc("Melhor decisão estratégica:", "4", "ignorar dados", "repetir sempre", "escolher acaso", "avaliar risco"),
-                mc("Operadores lógicos comuns:", "2", "+ e -", "&& e ||", "* e /", "new e class")
+            mc("Negacao de 'A e B':", "4", Difficulty.HARD, "A e nao B", "A ou B", "nao A e nao B sempre", "nao A ou nao B"),
+            tf("Defender pode ser util sem dano imediato.", "V", Difficulty.EASY),
+            mc("No xadrez, ameaca direta ao rei:", "2", Difficulty.EASY, "roque", "xeque", "empate", "promocao"),
+            mc("Se inimigo sempre ataca, boa acao:", "1", Difficulty.MEDIUM, "aumentar defesa", "curar inimigo", "ignorar vida", "jogar aleatorio"),
+            tf("Prever acao inimiga faz parte da estrategia.", "V", Difficulty.EASY),
+            mc("Resposta proporcional a uma acao:", "3", Difficulty.MEDIUM, "evaporacao", "inercia termica", "acao e reacao", "condensacao"),
+            mc("A=true, B=false. A || B =", "1", Difficulty.MEDIUM, "verdadeiro", "falso", "nulo", "erro"),
+            tf("Contra-atacar e reagir a uma acao adversaria.", "V", Difficulty.EASY),
+            mc("Melhor decisao estrategica:", "4", Difficulty.HARD, "ignorar dados", "repetir sempre", "escolher acaso", "avaliar risco"),
+            fb("Operador logico E em Java: ____", "&&", Difficulty.HARD)
         );
 
         add("MATH",
-                mc("3² + 4² =", "3", "12", "18", "25", "49"),
-                tf("Número primo tem exatamente dois divisores positivos.", "V"),
-                mc("2x + 6 = 18. x =", "2", "5", "6", "7", "8"),
-                mc("Média de 6, 8 e 10:", "1", "8", "9", "10", "24"),
-                tf("Soma dos ângulos de um triângulo é 180°.", "V"),
-                mc("20% de 150:", "4", "15", "20", "25", "30"),
-                mc("PA: a1=2, razão=3. quinto termo:", "3", "11", "12", "14", "15"),
-                tf("Raiz de 144 é 12.", "V"),
-                mc("5! =", "2", "60", "120", "20", "720"),
-                mc("R$80 com 25% de desconto:", "1", "R$60", "R$65", "R$70", "R$75")
+            mc("3^2 + 4^2 =", "3", Difficulty.MEDIUM, "12", "18", "25", "49"),
+            tf("Numero primo tem exatamente dois divisores positivos.", "V", Difficulty.MEDIUM),
+            mc("2x + 6 = 18. x =", "2", Difficulty.EASY, "5", "6", "7", "8"),
+            mc("Media de 6, 8 e 10:", "1", Difficulty.EASY, "8", "9", "10", "24"),
+            tf("Soma dos angulos de um triangulo e 180 graus.", "V", Difficulty.EASY),
+            mc("20% de 150:", "4", Difficulty.MEDIUM, "15", "20", "25", "30"),
+            mc("PA: a1=2, razao=3. quinto termo:", "3", Difficulty.HARD, "11", "12", "14", "15"),
+            tf("Raiz de 144 e 12.", "V", Difficulty.EASY),
+            fb("5! = ____", "120", Difficulty.HARD),
+            mc("R$80 com 25% de desconto:", "1", Difficulty.MEDIUM, "R$60", "R$65", "R$70", "R$75")
         );
 
         add("FIREWALL",
-                mc("Função principal de firewall:", "3", "brilho", "formatar PC", "filtrar conexões", "criar senhas"),
-                tf("Phishing tenta obter dados enganando usuários.", "V"),
-                mc("Melhora segurança da conta:", "1", "2FA", "mesma senha", "senha pública", "links suspeitos"),
-                mc("Malware é:", "2", "monitor", "software malicioso", "cabo", "linguagem segura"),
-                tf("Atualizações corrigem falhas de segurança.", "V"),
-                mc("Senha mais forte:", "4", "123456", "senha", "abcdef", "Tigre#47Lua!92"),
-                mc("Criptografia serve para:", "3", "apagar arquivos", "aumentar volume", "proteger dados", "mudar cor"),
-                tf("Wi-Fi público desconhecido pode ser arriscado.", "V"),
-                mc("Backup é importante porque:", "1", "recupera dados", "impede todo vírus", "substitui senha", "desliga internet"),
-                mc("Engenharia social explora:", "2", "placa de vídeo", "falhas humanas", "só matemática", "processador")
+            mc("Funcao principal de firewall:", "3", Difficulty.EASY, "brilho", "formatar PC", "filtrar conexoes", "criar senhas"),
+            tf("Phishing tenta obter dados enganando usuarios.", "V", Difficulty.EASY),
+            mc("Melhora seguranca da conta:", "1", Difficulty.EASY, "2FA", "mesma senha", "senha publica", "links suspeitos"),
+            mc("Malware e:", "2", Difficulty.EASY, "monitor", "software malicioso", "cabo", "linguagem segura"),
+            tf("Atualizacoes corrigem falhas de seguranca.", "V", Difficulty.EASY),
+            mc("Senha mais forte:", "4", Difficulty.MEDIUM, "123456", "senha", "abcdef", "Tigre#47Lua!92"),
+            mc("Criptografia serve para:", "3", Difficulty.MEDIUM, "apagar arquivos", "aumentar volume", "proteger dados", "mudar cor"),
+            tf("Wi-Fi publico desconhecido pode ser arriscado.", "V", Difficulty.EASY),
+            mc("Backup e importante porque:", "1", Difficulty.EASY, "recupera dados", "impede todo virus", "substitui senha", "desliga internet"),
+            fb("Engenharia social explora falhas ____", "humanas", Difficulty.HARD)
         );
     }
 
@@ -152,11 +152,15 @@ public class QuestionBank {
         allQuestions.addAll(list);
     }
 
-    private Question mc(String text, String answer, String... options) {
-        return new MultipleChoiceQuestion(text, answer, "Difícil", options);
+    private Question mc(String text, String answer, Difficulty d, String... options) {
+        return new MultipleChoiceQuestion(text, answer, d, options);
     }
 
-    private Question tf(String text, String answer) {
-        return new TrueFalseQuestion(text, answer, "Difícil");
+    private Question tf(String text, String answer, Difficulty d) {
+        return new TrueFalseQuestion(text, answer, d);
+    }
+
+    private Question fb(String text, String answer, Difficulty d) {
+        return new FillBlankQuestion(text, answer, d);
     }
 }

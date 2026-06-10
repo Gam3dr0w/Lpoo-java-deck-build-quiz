@@ -12,14 +12,12 @@ public abstract class Character {
 
     public void takeDamage(int damage) {
         int finalDamage = Math.max(1, damage - defense);
-        hp -= finalDamage;
-        if (hp < 0) hp = 0;
+        hp = Math.max(0, hp - finalDamage);
         System.out.println(name + " recebeu " + finalDamage + " de dano.");
     }
 
     public void heal(int value) {
-        hp += value;
-        if (hp > maxHp) hp = maxHp;
+        hp = Math.min(maxHp, hp + value);
         System.out.println(name + " recuperou " + value + " de vida.");
     }
 
@@ -33,10 +31,7 @@ public abstract class Character {
         System.out.println(name + " ganhou +" + value + " de defesa.");
     }
 
-    public boolean isAlive() {
-        return hp > 0;
-    }
-
+    public boolean isAlive() { return hp > 0; }
     public String getName() { return name; }
     public int getHp() { return hp; }
     public int getMaxHp() { return maxHp; }
