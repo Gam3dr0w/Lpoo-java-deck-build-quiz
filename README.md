@@ -1,7 +1,17 @@
-#CodeArena: Deck do Conhecimento#
+         #CodeArena: Deck do Conhecimento#
 
-Este é um jogo inspirado nos jogos de turno "Slay the Spire" e "Roguebook", misturando batalha por turnos, sistema de cartas e perguntas de quiz.
+Este é um jogo inspirado nos jogos de turno "Slay the Spire" e "Roguebook", misturando batalha por turnos, sistema de cartas e perguntas de quiz. O jogador enfrenta inimigos em batalhas sucessivas. Durante a batalha, ele utiliza cartas com efeitos como causar dano, curar vida, aumentar defesa ou aplicar melhorias. Para conseguir realizar ações, o jogador responde perguntas de quiz, que podem ser de múltipla escolha ou verdadeiro/falso.
 
-O jogador enfrenta inimigos em batalhas sucessivas. Durante a batalha, ele utiliza cartas com efeitos como causar dano, curar vida, aumentar defesa ou aplicar melhorias. Para conseguir realizar ações, o jogador responde perguntas de quiz, que podem ser de múltipla escolha ou verdadeiro/falso.
+Ao começar, você escolhe o nome do seu personagem e o tipo que ele pertence. Inicialmente, você recebe 4 cartas para atacar, cada tipo de carta possui uma habilidade especial, ao responder corretamente a pergunta, você faz um ataque juntamente com o uso da habilidade referete a sua carta. Após usada a carta, ela é descartada do seu inventário, você puxa uma carta em rounds intercalados (round sim e round não) e, caso ocorra de você ficar sem cartas antes de matar o inimigo ou morrer, você puxa mais 3 cartas para continuar no jogo. Caso não queira usar cartas, há o ataque padrão do seu personagem, que dá sempre a quantidade de ataque que há no status dele.
 
-Ao começar, você escolhe o nome do seu personagem e o tipo que ele pertence. Inicialmente, você recebe 4 cartas para atacar, cada tipo de carta possui uma lista diferente de perguntar que podem cair para você responder, ao responder corretamente a pergunta, você faz a habilidade ou o ataque correspondente ao tipo da carta. Após usada a carta, ela é descartada do seu inventário, você puxa uma carta em rounds intercalados (round sim e round não) e, caso ocorra de você ficar sem cartas antes de matar o inimigo ou morrer, você puxa mais 3 cartas para continuar no jogo.
+
+
+Updates do checkpoint 2:
+
+I) Adicionado 3 diferentes níveis de dificuldade que dão bônus variável de ataque entre os turnos
+
+-Facil: entre 0-5
+-Média: entre 3-10
+-Dificil: entre 6-15
+
+II) Adicionadas perguntas de preencher lacuna (fill blank), e elas se encaixam na dificuldade difícil.
