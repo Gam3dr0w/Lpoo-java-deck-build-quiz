@@ -10,4 +10,7 @@ public class TrueFalseQuestion extends Question {
         System.out.print("V ou F: ");
         return check(sc.nextLine());
     }
+
+    @Override
+    public String getKind() { return "Verdadeiro ou Falso"; }
 }

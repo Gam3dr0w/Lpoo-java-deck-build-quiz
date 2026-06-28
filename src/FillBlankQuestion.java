@@ -10,4 +10,7 @@ public class FillBlankQuestion extends Question {
         System.out.print("Resposta: ");
         return check(sc.nextLine());
     }
+
+    @Override
+    public String getKind() { return "Complete a Lacuna"; }
 }

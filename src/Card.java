@@ -26,5 +26,6 @@ public class Card implements SpecialAbility {
 
     public String getId() { return id; }
     public String getName() { return name; }
+    public String getDesc() { return desc; }
     public String toString() { return name + " - " + desc; }
 }

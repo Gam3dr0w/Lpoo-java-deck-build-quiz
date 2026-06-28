@@ -17,4 +17,12 @@ public abstract class Question {
     }
 
     public Difficulty getDifficulty() { return difficulty; }
+
+    public String getText() { return text; }
+
+    public boolean checkAnswer(String userAnswer) { return check(userAnswer); }
+
+    public String[] getOptions() { return new String[0]; }
+
+    public abstract String getKind();
 }

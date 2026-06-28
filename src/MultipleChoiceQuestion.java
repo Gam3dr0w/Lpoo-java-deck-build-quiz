@@ -14,4 +14,10 @@ public class MultipleChoiceQuestion extends Question {
         System.out.print("Resposta: ");
         return check(sc.nextLine());
     }
+
+    @Override
+    public String[] getOptions() { return options; }
+
+    @Override
+    public String getKind() { return "Multipla Escolha"; }
 }
