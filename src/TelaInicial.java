@@ -24,7 +24,7 @@ public class TelaInicial extends JFrame {
         titulo.setFont(new Font("SansSerif", Font.BOLD, 20));
         titulo.setAlignmentX(Component.LEFT_ALIGNMENT);
 
-        JLabel subtitulo = new JLabel("Responda quiz para atacar, curar e defender em batalhas por turno.");
+        JLabel subtitulo = new JLabel("Responda o quiz para atacar, curar e defender em batalhas por turno.");
         subtitulo.setFont(new Font("SansSerif", Font.PLAIN, 12));
         subtitulo.setForeground(new Color(90, 90, 90));
         subtitulo.setAlignmentX(Component.LEFT_ALIGNMENT);
@@ -56,12 +56,12 @@ public class TelaInicial extends JFrame {
             r.setBackground(Color.WHITE);
         }
 
-        JButton botaoIniciar = new JButton("Comecar jornada");
+        JButton botaoIniciar = new JButton("Começar jornada");
         estilizarBotaoPrimario(botaoIniciar);
         botaoIniciar.setAlignmentX(Component.LEFT_ALIGNMENT);
         botaoIniciar.addActionListener(this::aoClicarIniciar);
 
-        JLabel dica = new JLabel("Voce enfrentara 3 inimigos em sequencia. Boa sorte!");
+        JLabel dica = new JLabel("Voce enfrentará 3 inimigos em sequência. Boa sorte!");
         dica.setFont(new Font("SansSerif", Font.ITALIC, 11));
         dica.setForeground(new Color(130, 130, 130));
         dica.setAlignmentX(Component.LEFT_ALIGNMENT);
@@ -90,7 +90,7 @@ public class TelaInicial extends JFrame {
         if (nome.isEmpty()) {
             JOptionPane.showMessageDialog(this,
                     "Digite um nome para o seu personagem.",
-                    "Nome obrigatorio", JOptionPane.WARNING_MESSAGE);
+                    "Nome obrigatório", JOptionPane.WARNING_MESSAGE);
             campoNome.requestFocus();
             return;
         }

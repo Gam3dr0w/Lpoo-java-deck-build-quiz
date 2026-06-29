@@ -21,7 +21,7 @@ public class TelaFim extends JFrame {
         icone.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JLabel titulo = new JLabel(venceu
-                ? "Parabens! Voce venceu todas as batalhas!"
+                ? "Parabens! Você venceu todas as batalhas!"
                 : "Voce perdeu a jornada!");
         titulo.setFont(new Font("SansSerif", Font.PLAIN, 13));
         titulo.setAlignmentX(Component.CENTER_ALIGNMENT);

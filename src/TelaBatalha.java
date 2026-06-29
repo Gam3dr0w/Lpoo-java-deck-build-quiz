@@ -7,7 +7,7 @@ public class TelaBatalha extends JFrame implements BattleController.BattleListen
 
     private static final Enemy[] INIMIGOS = {
             new Enemy("Bug Iniciante", 45, 6, 1),
-            new Enemy("Erro de Compilacao", 65, 8, 2),
+            new Enemy("Erro de Compilação", 65, 8, 2),
             new Enemy("Boss NullPointer", 90, 11, 3)
     };
 
@@ -68,8 +68,8 @@ public class TelaBatalha extends JFrame implements BattleController.BattleListen
         painelAcoes.setOpaque(false);
         painelAcoes.setBorder(BorderFactory.createEmptyBorder(10, 0, 0, 0));
 
-        containerInferior.add(envolverComTitulo(painelAcoes, "Escolha sua acao"), CARTAO_ACOES);
-        containerInferior.add(envolverComTitulo(painelPergunta, "Responda para concluir a acao"), CARTAO_PERGUNTA);
+        containerInferior.add(envolverComTitulo(painelAcoes, "Escolha sua ação"), CARTAO_ACOES);
+        containerInferior.add(envolverComTitulo(painelPergunta, "Responda para concluir a ação"), CARTAO_PERGUNTA);
         raiz.add(containerInferior, BorderLayout.SOUTH);
 
         setContentPane(raiz);
@@ -135,12 +135,12 @@ public class TelaBatalha extends JFrame implements BattleController.BattleListen
 
         List<Card> mao = controller.getHand();
         if (mao.isEmpty()) {
-            JLabel semCartas = new JLabel("Sua mao esta vazia. Use o Ataque Comum ou aguarde a proxima compra.");
+            JLabel semCartas = new JLabel("Sua mão está vazia. Use o Ataque Comum ou aguarde a próxima compra.");
             semCartas.setFont(new Font("SansSerif", Font.ITALIC, 12));
             semCartas.setForeground(new Color(130, 130, 130));
             painelAcoes.add(semCartas);
         } else {
-            JLabel rotuloMao = new JLabel("Cartas na mao:");
+            JLabel rotuloMao = new JLabel("Cartas na mão:");
             rotuloMao.setFont(new Font("SansSerif", Font.BOLD, 12));
             rotuloMao.setAlignmentX(Component.LEFT_ALIGNMENT);
             painelAcoes.add(rotuloMao);
@@ -180,7 +180,6 @@ public class TelaBatalha extends JFrame implements BattleController.BattleListen
 
     private void responder(String resposta) {
         controller.responder(resposta);
-        // onEstadoAtualizado() cuida de atualizar a tela e decidir o que mostrar a seguir.
     }
 
     private void mostrarCartao(String nome) {
@@ -191,8 +190,6 @@ public class TelaBatalha extends JFrame implements BattleController.BattleListen
         log.append(mensagem + "\n");
         log.setCaretPosition(log.getDocument().getLength());
     }
-
-    // --- BattleController.BattleListener ---
 
     @Override
     public void onLog(String mensagem) {
@@ -220,7 +217,7 @@ public class TelaBatalha extends JFrame implements BattleController.BattleListen
         }
 
         player.heal(15);
-        apendarLog("Voce venceu e recuperou 15 de vida!");
+        apendarLog("Você venceu e recuperou 15 de vida!");
         atualizarStatus();
 
         indiceInimigo++;

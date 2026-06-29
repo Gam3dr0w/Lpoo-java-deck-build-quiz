@@ -8,13 +8,13 @@ public class Player extends Character {
     public void addTemporaryShield(int value, int turns) {
         buffDefense(value);
         temporaryDefenseTurns += turns;
-        System.out.println("Escudo temporario ativo por " + turns + " turno(s).");
+        System.out.println("Escudo temporário ativo por " + turns + " turno(s).");
     }
 
     public void endTurn() {
         if (temporaryDefenseTurns > 0 && --temporaryDefenseTurns == 0) {
             defense = Math.max(0, defense - 3);
-            System.out.println("O escudo temporario acabou.");
+            System.out.println("O escudo temporário acabou.");
         }
     }
 

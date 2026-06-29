@@ -20,7 +20,7 @@ public class BattleManager {
             showStatus(player, enemy);
 
             if (hand.isEmpty()) {
-                System.out.println("Sem cartas: voce perdeu o turno e comprou 3 cartas.");
+                System.out.println("Sem cartas: você perdeu o turno e comprou 3 cartas.");
                 draw(hand, 3);
                 enemy.attack(player);
                 player.endTurn();
@@ -38,7 +38,7 @@ public class BattleManager {
 
             if (turn % 2 == 0) {
                 draw(hand, 1);
-                System.out.println("Voce comprou 1 carta.");
+                System.out.println("Você comprou 1 carta.");
             }
 
             player.endTurn();
@@ -69,7 +69,7 @@ public class BattleManager {
         System.out.println("\nCarta usada: " + card.getName());
 
         if (q.ask(sc)) {
-            System.out.println("Correto! A carta ativou com bonus da dificuldade " + q.getDifficulty().getName() + ".");
+            System.out.println("Correto! A carta ativou com bônus da dificuldade " + q.getDifficulty().getName() + ".");
             card.use(player, enemy, q);
             player.addScore(q.getDifficulty().getScore() + 5);
         } else {
@@ -95,12 +95,12 @@ public class BattleManager {
 
     private int readChoice(int maxCards) {
         while (true) {
-            System.out.print("Escolha uma acao: ");
+            System.out.print("Escolha uma ação: ");
             try {
                 int n = Integer.parseInt(sc.nextLine());
                 if (n >= 0 && n <= maxCards) return n;
             } catch (Exception ignored) {}
-            System.out.println("Digite um numero valido.");
+            System.out.println("Digite um número válido.");
         }
     }
 }

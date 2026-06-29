@@ -66,7 +66,7 @@ public class BattleController {
 
     public void responder(String resposta) {
         if (perguntaAtual == null) {
-            throw new IllegalStateException("Nenhuma acao foi escolhida antes de responder.");
+            throw new IllegalStateException("Nenhuma ação foi escolhida antes de responder.");
         }
 
         boolean correto = perguntaAtual.checkAnswer(resposta);
@@ -97,7 +97,7 @@ public class BattleController {
 
         if (turn % 2 == 0) {
             draw(1);
-            log("Voce comprou 1 carta.");
+            log("Você comprou 1 carta.");
         }
 
         player.endTurn();
@@ -113,7 +113,7 @@ public class BattleController {
 
     private void processarTurnosVaziosAutomaticamente() {
         while (!batalhaTerminou() && hand.isEmpty()) {
-            log("Sem cartas: voce perdeu o turno e comprou 3 cartas.");
+            log("Sem cartas: você perdeu o turno e comprou 3 cartas.");
             draw(3);
             if (enemy.isAlive()) enemy.attack(player);
 
@@ -141,7 +141,7 @@ public class BattleController {
     private void aplicarCarta(boolean correto) {
         hand.remove(indiceCartaSelecionada);
         if (correto) {
-            log("Correto! A carta ativou com bonus da dificuldade " + perguntaAtual.getDifficulty().getName() + ".");
+            log("Correto! A carta ativou com bônus da dificuldade " + perguntaAtual.getDifficulty().getName() + ".");
             cartaSelecionada.use(player, enemy, perguntaAtual);
             player.addScore(perguntaAtual.getDifficulty().getScore() + 5);
         } else {

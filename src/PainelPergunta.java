@@ -126,8 +126,8 @@ public class PainelPergunta extends JPanel {
         } else {
             if (escolhaAtual == null) {
                 JOptionPane.showMessageDialog(this,
-                        "Selecione uma opcao antes de confirmar.",
-                        "Resposta obrigatoria", JOptionPane.WARNING_MESSAGE);
+                        "Selecione uma opção antes de confirmar.",
+                        "Resposta obrigatória", JOptionPane.WARNING_MESSAGE);
                 return;
             }
             resposta = escolhaAtual;
