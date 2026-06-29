@@ -11,7 +11,7 @@ public class PainelPergunta extends JPanel {
     private final JButton botaoConfirmar = new JButton("Confirmar resposta");
 
     private Consumer<String> aoConfirmar;
-    private String escolhaAtual; // usado pelos botoes de multipla escolha / V-F
+    private String escolhaAtual;
 
     public PainelPergunta() {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));

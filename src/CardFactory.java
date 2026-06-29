@@ -3,7 +3,7 @@ import java.util.*;
 public class CardFactory {
     public static List<Card> createDeck() {
         return Arrays.asList(
-            new Card("JAVA", "Ataque Java", "dano baseado no ataque"),
+            new Card("JAVA", "Ataque Java", "dano + bonus fixo"),
             new Card("LOOP", "Loop Cortante", "dano dobrado"),
             new Card("CURA", "Cura Binária", "recupera vida"),
             new Card("ESCUDO", "Escudo de Newton", "defesa temporaria"),
@@ -11,7 +11,7 @@ public class CardFactory {
             new Card("HISTORIA", "Golpe Histórico", "ataque + defesa"),
             new Card("VIDA", "Energia Vital", "cura direta"),
             new Card("CONTRA", "Contra-Ataque", "defesa + dano"),
-            new Card("MATH", "Raio Matemático", "dano forte"),
+            new Card("MATH", "Raio Matemático", "dano forte fixo"),
             new Card("FIREWALL", "Firewall", "escudo + cura")
         );
     }

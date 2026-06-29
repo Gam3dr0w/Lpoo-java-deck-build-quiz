@@ -45,14 +45,12 @@ public class TelaBatalha extends JFrame implements BattleController.BattleListen
         raiz.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
         raiz.setBackground(Color.WHITE);
 
-        // --- Topo: status de jogador e inimigo lado a lado ---
         JPanel topo = new JPanel(new GridLayout(1, 2, 12, 0));
         topo.setOpaque(false);
         topo.add(painelJogador);
         topo.add(painelInimigo);
         raiz.add(topo, BorderLayout.NORTH);
 
-        // --- Centro: log de eventos ---
         log.setEditable(false);
         log.setLineWrap(true);
         log.setWrapStyleWord(true);
@@ -63,7 +61,6 @@ public class TelaBatalha extends JFrame implements BattleController.BattleListen
         scrollLog.setBorder(BorderFactory.createLineBorder(new Color(225, 225, 225)));
         raiz.add(scrollLog, BorderLayout.CENTER);
 
-        // --- Inferior: alterna entre painel de acoes e painel de pergunta ---
         painelAcoes.setLayout(new BoxLayout(painelAcoes, BoxLayout.Y_AXIS));
         painelAcoes.setOpaque(false);
         painelAcoes.setBorder(BorderFactory.createEmptyBorder(10, 0, 0, 0));
