@@ -6,12 +6,26 @@ Ao começar, você escolhe o nome do seu personagem e o tipo que ele pertence. I
 
 
 
+-------------------------------=@=-------------------------------
+
 Updates do checkpoint 2:
 
 I) Adicionado 3 diferentes níveis de dificuldade que dão bônus de ataque entre os turnos
-
--Facil: nenhum bônus
+-Fácil: nenhum bônus
 -Média: +3
 -Dificil: +6
 
 II) Adicionadas perguntas de preencher lacuna (fill blank), e elas se encaixam na dificuldade difícil.
+
+-------------------------------=@=-------------------------------
+
+Updates da entrega final:
+
+I) Implementação de uma interface gráfica onde agora é possível jogar com teclado e mouse.
+
+II) Adição de uma tela de status no topo da tela para checar informações em tempo real do personagem jogável e do inimigo.
+
+III) Adição de botões para a escolha entre as 5 ações tomadas (4 cartas ou ataque comum).
+
+IV) Uso do mouse para responder perguntas de alternativa de verdadeiro ou falso e uso de um espaço de texto para perguntas de completar lacunas.
+
